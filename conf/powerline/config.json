@@ -1,0 +1,12 @@
+{
+	"common": {
+		"term_truecolor": false,
+        "default_top_theme": "powerline"
+	},
+	"ext": {
+		"tmux": {
+			"colorscheme": "default",
+			"theme": "default"
+		}
+	}
+}

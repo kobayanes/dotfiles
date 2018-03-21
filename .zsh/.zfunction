@@ -1,0 +1,35 @@
+## ----------------------------------------------------------------------------
+## file    : .zfunction
+## brief   : zsh function configuration file.
+## module  : .zsh
+##
+## author  : Teppei Kobayashi <kobayanes@gmail.com>
+## date    : 2018/01/30
+## ----------------------------------------------------------------------------
+
+
+## ----------------------------------------------------------------------------
+## brief   : share path to emacs.
+## note    : -
+## ----------------------------------------------------------------------------
+perl -wle \
+     'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
+     PATH > ~/.emacs.d/cache/shellenv.el
+
+
+## ----------------------------------------------------------------------------
+## brief   : fzf configuration.
+## note    : -
+## ----------------------------------------------------------------------------
+fpath=($ZDOTDIR/functions $fpath)
+for widget_name in $ZDOTDIR/functions/*; do
+  local function_name="${widget_name:t}"
+  zle -N "${function_name}"
+  autoload -Uz "${function_name}"
+done
+
+bindkey '^r' fh
+bindkey '^xk' fkill
+bindkey '^xf' ffp
+bindkey '^xd' fdp
+bindkey '^xm' fdh

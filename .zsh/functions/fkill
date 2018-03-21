@@ -1,0 +1,15 @@
+## ----------------------------------------------------------------------------
+## file    : fkill
+## brief   : zsh function configuration file.
+## module  : .zsh
+##
+## author  : Teppei Kobayashi <kobayanes@gmail.com>
+## date    : 2018/01/28
+## ----------------------------------------------------------------------------
+
+
+# fkill
+local process
+process=$(ps auxww | fzf-tmux | awk '{print $2}')
+[ -n "$process" ] && kill -9 $process
+zle accept-line

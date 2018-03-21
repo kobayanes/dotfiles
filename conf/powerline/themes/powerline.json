@@ -1,0 +1,80 @@
+{
+	"dividers": {
+		"left": {
+			"hard": " ",
+			"soft": " "
+		},
+		"right": {
+			"hard": " ",
+			"soft": " "
+		}
+	},
+	"spaces": 1,
+	"segment_data": {
+		"date": {
+			"before": "📅  "
+		},
+		"time": {
+			"before": "⌚  "
+		},
+		"powerline.segments.common.net.network_load": {
+			"args": {
+				"recv_format": "⬇ {value:>8}",
+				"sent_format": "⬆ {value:>8}"
+			}
+		},
+		"powerline.segments.common.net.hostname": {
+			"before": "🖥 "
+		},
+
+		"powerline.segments.common.net.internal_ip": {
+			"before": "🖧  "
+		},
+		"powerline.segments.common.net.external_ip": {
+			"before": "🗺    "
+		},
+		"powerline.segments.common.sys.system_load":{
+			"before": "📊  "
+		},
+		"powerline.segments.common.bat.battery": {
+			"args": {
+				"full_heart": "♥",
+				"empty_heart": "♥",
+				"online": "⚡︎",
+				"offline": " "
+			}
+		},
+		"powerline.segments.common.sys.uptime": {
+			"before": "⇑  "
+		},
+		"powerline.segments.common.mail.email_imap_alert": {
+			"before": "✉ "
+		},
+		"powerline.segments.common.env.virtualenv": {
+			"before": "ⓔ  "
+		},
+		"powerline.segments.common.wthr.weather": {
+			"args": {
+				"icons": {
+					"day":           "〇",
+					"blustery":      "⚑",
+					"rainy":         "☔",
+					"cloudy":        "☁",
+					"snowy":         "❅",
+					"stormy":        "☈",
+					"foggy":         "≡",
+					"sunny":         "☼",
+					"night":         "☾",
+					"windy":         "☴",
+					"not_available": "�",
+					"unknown":       "⚠"
+				}
+			}
+		},
+		"powerline.segments.common.time.fuzzy_time": {
+			"args": {
+				"unicode_text": true
+			}
+		}
+	}
+}

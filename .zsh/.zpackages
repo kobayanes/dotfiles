@@ -1,0 +1,19 @@
+## ----------------------------------------------------------------------------
+## file    : .zpackages
+## brief   : general configration.
+## module  : .zsh
+##
+## author  : Teppei Kobayashi <kobayanes@gmail.com>
+## date    : 2018/03/02
+## ----------------------------------------------------------------------------
+
+
+## ----------------------------------------------------------------------------
+## brief   : zsh plugins.
+## note    : -
+## ----------------------------------------------------------------------------
+# zsh plugins
+zplug "zsh-users/zsh-completions"
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "zsh-users/zsh-syntax-highlighting", defer:2

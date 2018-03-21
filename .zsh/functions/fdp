@@ -1,0 +1,17 @@
+## ----------------------------------------------------------------------------
+## file    : fdp
+## brief   : zsh function configuration file.
+## module  : .zsh
+##
+## author  : Teppei Kobayashi <kobayanes@gmail.com>
+## date    : 2018/01/29
+## ----------------------------------------------------------------------------
+
+
+# fdp: dir preview
+local dirname
+local prefind="find -type d ! -path '*/.git*' ! -path '*/CMakeFiles*'"
+local preview="tree -F -Cha -I '.git|CMakeFiles' --dirsfirst {} | head -200"
+dirname="$(eval ${prefind} | fzf-tmux --preview ${preview})"
+BUFFER=${BUFFER}${dirname}${RBUFFER}
+CURSOR=${#BUFFER}${#dirname}

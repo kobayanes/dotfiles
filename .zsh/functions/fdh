@@ -1,0 +1,18 @@
+## ----------------------------------------------------------------------------
+## file    : fdh
+## brief   : zsh function configuration file.
+## module  : .zsh
+##
+## author  : Teppei Kobayashi <kobayanes@gmail.com>
+## date    : 2018/01/28
+## ----------------------------------------------------------------------------
+
+
+# fdh: directory history
+local selectdir
+local pushdnum
+local preview="ls -lFh --color=always {} | head -200"
+selectdir="$(dirs -v | cut -f 2 | fzf-tmux --preview ${preview})"
+pushdnum=$(dirs -v | grep ${selectdir} | cut -f 1)
+pushd +${pushdnum}
+zle accept-line

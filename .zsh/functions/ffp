@@ -1,0 +1,17 @@
+## ----------------------------------------------------------------------------
+## file    : ffp
+## brief   : zsh function configuration file.
+## module  : .zsh
+##
+## author  : Teppei Kobayashi <kobayanes@gmail.com>
+## date    : 2018/01/28
+## ----------------------------------------------------------------------------
+
+
+# ffp: file preview
+local filename
+local prefind="find -type f ! -path '*/.git*' ! -path '*/CMakeFiles*'"
+local preview="head -200 | less {}"
+filename="$(eval ${prefind} | fzf-tmux --preview ${preview})"
+BUFFER=${BUFFER}${filename}${RBUFFER}
+CURSOR=${#BUFFER}${#filename}
