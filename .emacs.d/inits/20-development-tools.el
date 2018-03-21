@@ -4,7 +4,7 @@
 ;; module  : .emacs.d
 ;;
 ;; author  : Teppei Kobayashi <kobayanes@gmail.com>
-;; date    : 2018/01/27
+;; date    : 2018/03/21
 ;; ----------------------------------------------------------------------------
 
 
@@ -26,23 +26,6 @@
 
 
 ;; ----------------------------------------------------------------------------
-;; brief   : yasnippet configuration.
-;; note    : -
-;; ----------------------------------------------------------------------------
-(require 'yasnippet)
-(yas-global-mode t)
-
-; include snippets
-(setq yas-snippet-dirs
-      '("~/.emacs.d/snippets"))
-
-; keybinds
-(define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)      ; insert snippet
-(define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)         ; create new snippet
-(define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)  ; open snippet file
-
-
-;; ----------------------------------------------------------------------------
 ;; brief   : smart-parens configuration.
 ;; note    : -
 ;; ----------------------------------------------------------------------------
@@ -56,8 +39,11 @@
 ;; ----------------------------------------------------------------------------
 (require 'expand-region)
 
-(global-set-key (kbd "C-=") 'er/expand-region)    ; expand region
-(global-set-key (kbd "M-=") 'er/contract-region)  ; contract region
+; key bindings
+(global-unset-key (kbd "C-o"))
+(global-unset-key (kbd "M-o"))
+(global-set-key (kbd "C-o") 'er/expand-region)    ; expand region
+(global-set-key (kbd "M-o") 'er/contract-region)  ; contract region
 
 
 ;; ----------------------------------------------------------------------------

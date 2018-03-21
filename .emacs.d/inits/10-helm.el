@@ -4,7 +4,7 @@
 ;; module  : .emacs.d
 ;;
 ;; author  : Teppei Kobayashi <kobayanes@gmail.com>
-;; date    : 2018/01/27
+;; date    : 2018/03/21
 ;; ----------------------------------------------------------------------------
 
 
@@ -28,16 +28,3 @@
 
 ; helm-projectile configuration
 (helm-projectile-on)
-
-; helm-gtags configuration
-(custom-set-variables
- '(helm-gtags-path-style 'root)
- '(helm-gtags-auto-update t))
-
-; key bindings
-(global-unset-key (kbd "C-o"))
-(global-unset-key (kbd "M-o"))
-(with-eval-after-load "helm-gtags"
-  (define-key helm-gtags-mode-map (kbd "C-o") 'helm-gtags-dwim)
-  (define-key helm-gtags-mode-map (kbd "M-o") 'helm-gtags-pop-stack)
-  (define-key helm-gtags-mode-map (kbd "C-.") 'helm-gtags-show-stack))

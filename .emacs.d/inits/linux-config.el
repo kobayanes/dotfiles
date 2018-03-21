@@ -4,7 +4,7 @@
 ;; module  : .emacs.d
 ;;
 ;; author  : Teppei Kobayashi <kobayanes@gmail.com>
-;; date    : 2018/01/16
+;; date    : 2018/03/21
 ;; ----------------------------------------------------------------------------
 
 

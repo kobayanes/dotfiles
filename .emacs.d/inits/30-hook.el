@@ -4,7 +4,7 @@
 ;; module  : .emacs.d
 ;;
 ;; author  : Teppei Kobayashi <kobayanes@gmail.com>
-;; date    : 2018/03/02
+;; date    : 2018/03/21
 ;; ----------------------------------------------------------------------------
 
 
@@ -63,8 +63,7 @@
 
 (add-hook 'python-mode-hook
           '(lambda()
-             (python-mode-hooks)
-             (helm-gtags-mode)))
+             (python-mode-hooks)))
 
 
 ;; ----------------------------------------------------------------------------

@@ -4,7 +4,7 @@
 ;; module  : .emacs.d
 ;;
 ;; author  : Teppei Kobayashi <kobayanes@gmail.com>
-;; date    : 2018/03/02
+;; date    : 2018/03/21
 ;; ----------------------------------------------------------------------------
 
 
@@ -26,9 +26,9 @@
     gruvbox-theme rainbow-delimiters powerline
     markdown-mode lua-mode cmake-mode json-mode go-mode
     recentf-ext session undo-tree simpleclip exec-path-from-shell
-    helm helm-ag helm-descbinds helm-flycheck helm-projectile helm-gtags
+    helm helm-ag helm-descbinds helm-flycheck helm-projectile
     flycheck flycheck-color-mode-line flycheck-pos-tip
-    magit git-gutter projectile yasnippet expand-region smartparens highlight-symbol anzu
+    magit git-gutter projectile expand-region smartparens highlight-symbol anzu
     ))
 (let ((not-installed (loop for x in installing-package-list
                            when (not (package-installed-p x))
