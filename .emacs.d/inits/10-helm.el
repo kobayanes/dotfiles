@@ -11,7 +11,6 @@
 (require 'helm-config)
 (require 'helm-descbinds)
 (require 'helm-ag)
-(require 'helm-gtags)
 (require 'helm-projectile)
 (helm-mode 1)
 (helm-descbinds-mode t)
@@ -19,6 +18,7 @@
 ; keybind
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
 (define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-find-file-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 (define-key helm-ag-map (kbd "TAB") 'helm-execute-persistent-action)
 

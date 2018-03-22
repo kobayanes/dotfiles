@@ -1,0 +1,34 @@
+## ----------------------------------------------------------------------------
+## file    : .gitignore
+## brief   : specified untrack file.
+## module  : dotfiles
+##
+## author  : Teppei Kobayashi <kobayanes@gmail.com>
+## date    : 2018/01/30
+## ----------------------------------------------------------------------------
+
+
+# initialize
+/*
+!install.sh
+!install-after.sh
+
+# .emacs.d
+!/.emacs.d/
+/.emacs.d/*
+!/.emacs.d/Cask
+!/.emacs.d/init.el
+!/.emacs.d/inits/
+!/.emacs.d/snippets/
+
+#.zsh
+!/.zsh/
+/.zsh/.zcompdump
+/.zsh/.zsh_cache/
+/.zsh/.zplug
+
+# others
+!/conf/
+!/.gitignore
+!/.tmux.conf
+!/.dir_colors

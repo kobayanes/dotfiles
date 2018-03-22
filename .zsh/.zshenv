@@ -4,7 +4,7 @@
 ## module  : .zsh
 ##
 ## author  : Teppei Kobayashi <kobayanes@gmail.com>
-## date    : 2018/03/02
+## date    : 2018/03/21
 ## ----------------------------------------------------------------------------
 
 
@@ -23,6 +23,14 @@ umask 022
 # terminal settings
 export TERM=screen-256color
 eval $(dircolors -b ~/.dir_colors)
+
+# history settings
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
+export HISTCONTROL=ignoreboth
+export HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S '
+export HISTIGNORE=?:??:???:????
 
 # lang. variables
 export LANG=en_US.UTF-8

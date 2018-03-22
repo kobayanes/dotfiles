@@ -4,7 +4,7 @@
 ## module  : .zsh
 ##
 ## author  : Teppei Kobayashi <kobayanes@gmail.com>
-## date    : 2018/03/02
+## date    : 2018/03/21
 ## ----------------------------------------------------------------------------
 
 
@@ -149,15 +149,6 @@ bindkey -r '^K'  # remove keybind "K"
 bindkey '^P' backward-word
 bindkey '^N' forward-word
 bindkey '^K' kill-word
-
-
-## ----------------------------------------------------------------------------
-## brief   : command history configuration.
-## note    : -
-## ----------------------------------------------------------------------------
-HISTFILE=~/.zsh_history
-HISTSIZE=100000
-SAVEHIST=100000
 
 
 ## ----------------------------------------------------------------------------
