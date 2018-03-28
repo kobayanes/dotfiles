@@ -4,7 +4,7 @@
 ;; module  : .emacs.d
 ;;
 ;; author  : Teppei Kobayashi <kobayanes@gmail.com>
-;; date    : 2018/03/21
+;; date    : 2018/03/28
 ;; ----------------------------------------------------------------------------
 
 
@@ -32,6 +32,12 @@
 (require 'smartparens-config)
 (smartparens-global-mode t)
 
+
+;; ----------------------------------------------------------------------------
+;; brief   : smart-parens configuration.
+;; note    : -
+;; ----------------------------------------------------------------------------
+(setq highlight-indent-guides-method 'character)
 
 ;; ----------------------------------------------------------------------------
 ;; brief   : expand-region configuration.

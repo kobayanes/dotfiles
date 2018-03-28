@@ -4,7 +4,7 @@
 ;; module  : .emacs.d
 ;;
 ;; author  : Teppei Kobayashi <kobayanes@gmail.com>
-;; date    : 2018/03/21
+;; date    : 2018/03/28
 ;; ----------------------------------------------------------------------------
 
 
@@ -15,6 +15,7 @@
 (add-hook 'prog-mode-hook
           '(lambda()
              (rainbow-delimiters-mode)
+             (highlight-indent-guides-mode)
              (highlight-symbol-nav-mode)
              (highlight-symbol-mode)))
 (add-hook 'flycheck-mode-hook

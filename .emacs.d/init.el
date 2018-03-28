@@ -4,7 +4,7 @@
 ;; module  : .emacs.d
 ;;
 ;; author  : Teppei Kobayashi <kobayanes@gmail.com>
-;; date    : 2018/03/21
+;; date    : 2018/03/28
 ;; ----------------------------------------------------------------------------
 
 
@@ -23,7 +23,7 @@
   '(
     init-loader
     auto-complete auto-complete-c-headers go-autocomplete
-    gruvbox-theme rainbow-delimiters powerline
+    gruvbox-theme rainbow-delimiters powerline highlight-indent-guides
     markdown-mode lua-mode cmake-mode json-mode go-mode
     recentf-ext session undo-tree simpleclip exec-path-from-shell
     helm helm-ag helm-descbinds helm-flycheck helm-projectile
